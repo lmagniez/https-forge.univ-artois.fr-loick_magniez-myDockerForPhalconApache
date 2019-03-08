@@ -1,0 +1,30 @@
+version: '2'
+services:
+  phalcon:
+    build:
+      context: ./docker/phalcon
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./phalcon-app:/var/www/phalcon/
+    links:
+      - db:db
+    networks:
+      - phalcon-network
+  db:
+    image: mysql:latest # or mariadb
+    ports:
+      - 3306:3306
+    volumes:
+      - ./phalcon-data:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_DATABASE: phalcon
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - phalcon-network
+
+networks:
+  phalcon-network:
+      driver: bridge
