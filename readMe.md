@@ -21,6 +21,11 @@ docker-compose up
 db port (mysql): 3306
 apache2 port: 80
 
+Accès en bash
+```
+docker exec -it <ContainerId> bash
+```
+
 ## 1.2 Connect to db from host
 ```
 mysql -h localhost -P 3306 --protocol=tcp -u root -p
