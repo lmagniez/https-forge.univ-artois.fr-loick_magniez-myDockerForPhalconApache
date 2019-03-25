@@ -3,6 +3,8 @@ FROM mattrayner/lamp:latest-1604-php7
 COPY ./apache2.conf /etc/apache2/
 COPY ./phaphalcon.com.conf /etc/apache2/sites-available/
 COPY ./phaphalcon.com.conf /etc/apache2/sites-enabled/
+COPY ./000-default.conf /etc/apache2/sites-enabled/
+COPY ./000-default.conf /etc/apache2/sites-available/
 
 RUN /usr/bin/apt-get update && apt-get -y install git
         
