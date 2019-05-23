@@ -19,6 +19,7 @@ The project use the latest-1604-php7 version:
 docker-compose up
 ```
 db port (mysql): 3306
+
 apache2 port: 80
 
 Accès en bash
@@ -30,9 +31,9 @@ docker exec -it <ContainerId> bash
 ```
 mysql -h localhost -P 3306 --protocol=tcp -u root -p
 ```
-db login are available and can be change in docker-compose.yml.
+db login are available and can be changed in docker-compose.yml.
 
-## 1.3 Access to the phalcon app
+## 1.3 Access to the phalcon app
 
 Url to access the app:
 phaphalcon.com/<appName>/
@@ -43,7 +44,7 @@ phaphalcon.com/<appName>/
 ...
 
 ## 2.2 Insert phalcon app
-In phalcon-app folder, insert your app folder.
+In phalcon-app folder, insert your phalcon app folder.
 
 ## 2.3 Change website name
 In order to change the domain name, you must change the */docker/phalcon/phaphalcon.com.config* filename and every occurrence of the domain name in the file.
