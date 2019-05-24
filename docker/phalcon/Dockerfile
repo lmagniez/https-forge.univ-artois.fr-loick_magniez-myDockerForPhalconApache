@@ -15,7 +15,7 @@ RUN git clone https://github.com/phalcon/phalcon-devtools.git /usr/local/lib/pha
 RUN apt-get update && apt-get -y install curl software-properties-common
 
 RUN curl -s "https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh" | bash
-RUN apt-get -y install php7.2-phalcon
+RUN apt-get -y install php7.3-phalcon
 
 
 
