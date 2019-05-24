@@ -18,9 +18,9 @@ The project use the latest-1604-php7 version:
 ```
 docker-compose up
 ```
-db port (mysql): 3306
+db host&port (mariadb): db:3306
 
-apache2 port: 80
+apache2 host&port: phalcon:80
 
 Accès en bash
 ```
@@ -36,6 +36,7 @@ db login are available and can be changed in docker-compose.yml.
 ## 1.3 Access to the phalcon app
 
 Url to access the app:
+localhost/< appName >/
 phaphalcon.com/< appName >/
 
 # 2. How to configure
