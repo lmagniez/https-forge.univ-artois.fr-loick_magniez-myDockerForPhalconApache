@@ -42,10 +42,10 @@ phaphalcon.com/< appName >/
 # 2. How to configure
 
 ## 2.1 Insert database script
-...
+
+Script are added automatically to the database.
+When executing docker-compose, the db component will execute the script in the docker/maria_db/db_init/1_ddl.sql file.
 
 ## 2.2 Insert phalcon app
 In phalcon-app folder, insert your phalcon app folder.
-
-## 2.3 Change website name
-In order to change the domain name, you must change the */docker/phalcon/phaphalcon.com.config* filename and every occurrence of the domain name in the file.
+A sample project is already included in the project
